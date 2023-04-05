@@ -1,0 +1,183 @@
+body{
+    color: #666666;
+    background-color: #ffffff;
+    background-position: center;
+    /* font-family: Georgia, Times, serif; */
+    font-family: Helvetica;
+    line-height: 1em;
+    margin: 0px;
+    
+}
+
+/* lề của mỗi cột
+960px | 12 cột | mỗi cột 60px
+mỗi cột có lề là 10px
+margin:0 10px 15px 10px; 
+*/
+.img-header{
+    top: 20%;
+    margin:0 10px 15px 10px;
+}
+.navheader{
+    margin:0 20px 15px 20px;
+}
+
+
+header{
+    /* height: 100px; */
+    background-color: rgb(255, 255, 255);
+    font-size: 0.9em;
+}
+
+
+.container{
+    width: 960px;
+    /* height: ; */
+    margin: 20px auto 20px auto;
+    border: 2px solid #fcfdff;
+    background-color: #ffffff;
+}
+
+.lineone>th>nav>ul>li>a{
+    color: rgb(82, 158, 89);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    font-size: small;
+}
+
+
+.linetwo{
+    background: rgb(255, 255, 255);
+    font-size: 0.9em;
+    color: rgb(165, 162, 162);
+}
+.linetwo>th>nav>ul>li>a{
+    color: rgb(204, 195, 195);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    /* color: black; */
+}
+
+.innner-header{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+ul.menu-nav{
+    display: flex;
+}
+
+ul.menu-nav a{
+    text-transform: uppercase;
+    padding: 10px 20px; 
+    color: black   ;
+    
+}
+
+.slogon h1{
+    color: rgb(82, 158, 89);
+}
+
+.slogon{
+    text-align: center;
+}
+
+
+
+
+.searchthongtin{
+    text-align: center;
+    float: center;
+}
+
+.searchthongtin>input{
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 300px;
+    height: 50px;
+
+}
+.searchclick{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.nutsearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .475rem .75rem;
+    border-radius: 1rem;
+    border: 1px solid #bebebe;
+    white-space: nowrap;
+    line-height: 1rem;
+    font-size: .75rem;
+    background-color: rgba(241, 241, 241, 0.986);
+}
+
+.bg_main{
+    width:100%;
+	float:left;
+	height:auto;
+	border-bottom:solid 10px #e7dcdc;
+}
+
+.product{
+    width:220px;
+    float:left;
+    height:auto;
+    margin:0 10px 15px 10px;
+}
+.product .picture{
+    width:100%;
+	float:left;
+	height:180px;
+	text-align:center;
+}
+
+.product .title{
+    width:100%;
+    float:left;
+    height:auto;
+    margin:12px 0 0 0px;    
+}
+
+.picture .pictureproduct{
+    width:150px;
+	height:176px;
+}
+
+.title h3{
+    text-align:center;
+    width:100%;
+    line-height:20px;
+    float:left;
+    display:block;
+    font-weight:bold;
+    font-size:14px;    
+}
+.title h3 a{
+    text-align:center;
+	color:#222222;
+	text-align:center;
+	width:100%;
+	line-height:20px;
+	float:left;
+	display:block;
+}
+.nextpage{
+    text-align: center;
+    margin: 4px auto;
+    width: 100%;
+    float: left;
+}
