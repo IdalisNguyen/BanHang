@@ -1,7 +1,7 @@
 body{
     color: #666666;
     background-color: #ffffff;
-    background-position: center;
+    /* background-position: center; */
     /* font-family: Georgia, Times, serif; */
     font-family: Helvetica;
     line-height: 1em;
@@ -28,7 +28,15 @@ header{
     background-color: rgb(255, 255, 255);
     font-size: 0.9em;
 }
+article{
+    background-color: rgb(255, 255, 255);
+    width: 960px;
+    height: 2500px;
+}
 
+section{
+    background-color: rgb(255, 255, 255);
+}
 
 .container{
     width: 960px;
@@ -57,6 +65,46 @@ header{
 ul{
     list-style: none;
 }
+
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+.menu-nav li ul{
+    display: none;
+    position: absolute;
+
+}
+.menu-nav li>ul li{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #f8f8f8;
+    text-align: left;
+
+}
+.menu-nav li>ul li:first-child a{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.menu-nav li>ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.menu-nav li>ul li:last-child a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+.menu-nav  li:hover > ul{
+    display:  block;
+    z-index: 2;
+}
+.menu-nav li>ul li >a{
+    color: rgb(82, 158, 89);
+
+}
+
+
 
 a{
     text-decoration: none;
@@ -130,6 +178,8 @@ ul.menu-nav a{
 	float:left;
 	height:auto;
 	border-bottom:solid 10px #e7dcdc;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 .product{
@@ -137,6 +187,7 @@ ul.menu-nav a{
     float:left;
     height:auto;
     margin:0 10px 15px 10px;
+    overflow: hidden;
 }
 .product .picture{
     width:100%;
@@ -152,9 +203,36 @@ ul.menu-nav a{
     margin:12px 0 0 0px;    
 }
 
+
+.product .picture{
+    position: relative;
+}
+
 .picture .pictureproduct{
-    width:150px;
-	height:176px;
+    opacity: 1;
+    transition: all 0.65s;
+    width: 150px;
+    height: 176px;  
+}
+.picture .picturehide{
+    opacity: 0;
+    transition: all 0.65s;
+    width: 150px;
+    height: 176px;
+    position: absolute;
+    left: -50%;  
+    top: 8%;
+    visibility: hidden;
+    border-radius: 5px;
+}
+
+.picture:hover .pictureproduct{
+    opacity: 0;
+}
+.product:hover .picturehide{
+    opacity: 1;
+    visibility: visible;
+    left: 18%;
 }
 
 .title h3{
@@ -174,10 +252,150 @@ ul.menu-nav a{
 	line-height:20px;
 	float:left;
 	display:block;
+
 }
+.titlephanloai h3>a{
+    color: rgb(31, 133, 42);
+}
+.titlephanloai >h3{
+    text-transform: uppercase;
+    font-size: 19px;
+    text-align: center;
+
+}
+
 .nextpage{
     text-align: center;
     margin: 4px auto;
     width: 100%;
     float: left;
+}
+
+.container .phanloainhakinh {
+    width: 100%;
+    float: left;
+    height: 681px;
+    background: url(picture/nhakinh.png) no-repeat top center;
+    border-radius: 7px;
+    margin: 10px 0 10px 0px;
+    padding: 0px 0 0 0px;
+    display: block;
+}
+.nhakinhphanloai{
+    width: 300px;
+    height: 260px;
+    float: left;
+    margin: 40px 10px 15px 10px;
+    overflow: hidden;
+}
+.phanloainhakinh .anhnhakinhphanloai{
+    width: 100%;
+    float: left;
+    height: auto;
+    margin-left: -40px;
+    /* border-radius: 10px;
+    border: solid 5px #fff;
+    box-shadow: 0px 5px 5px #888888;
+    height: 219px; */
+}
+.nhakinhphanloai .anhnhakinhphanloai{
+    position: relative;
+}
+.bgwhite{
+    opacity: 0.5;
+    background: white;
+    width: 0px;
+    height: 0px;    
+    position: absolute;
+    top: 16px;  
+    /* top: 210px; */
+    justify-content: center;
+    visibility: hidden;
+    transition: all 0.35s; 
+}
+.anhnhakinhphanloai:hover .bgwhite{
+    opacity: 0.5;
+    visibility: visible;
+    text-align: center;
+    width: 280px;
+    height: 194px;
+    /* top: 18px; */
+}
+
+
+.boderkienthuc{
+    border-radius: 10px;
+    border: solid 5px rgb(82, 158, 89);
+    box-shadow: 0px 5px 5px #888888;
+    height: 176px;
+    width: 150px;
+}
+
+.container .kienthuc{
+    width: 100%;
+    float: left;
+    height: 681px;  
+    background: url(picture/kienthuc/back.png) no-repeat top center;
+    border-radius: 7px;
+    margin: 10px 0 10px 0px;
+    padding: 50px  0 0 0px;
+    display: block;
+}   
+.product .picture{
+    position: relative;
+}
+
+.picture .pictureproduct2{
+    opacity: 1;
+    transition: all 4s;
+    width: 150px;
+    height: 176px;  
+    border-radius: 5px;
+}
+.picture .picturehidewhite{
+    background: white;
+    opacity: 0.7;
+    transition: all 0.35s; 
+    width: 162px;
+    height: 190px;
+    position: absolute;
+    left: -50%;  
+    top: 8%;
+    visibility: hidden;
+    border-radius: 5px;
+}
+
+.product:hover .picturehidewhite{
+    opacity: 0.7;
+    visibility: visible;
+    left: 18%;
+}
+.footerimg{
+    width: 960px;
+    height: 73px;
+    margin-top: -80px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    float: left;
+    background: url(picture/footer.jpg) no-repeat center top;
+}
+
+.phanduoi .innnerfooter{
+    width: 1143px;
+    height: 264px;
+    background: silver;
+    margin: 0 auto;
+    clear: both;
+    display: block;
+    text-align: left;
+    color: #fff;
+    line-height: 20px;
+} 
+.imgcuoi{
+    border-radius: 20px;
+}
+.phanduoi{
+    background: rgb(82, 158, 89);
+    color: #fff;
+    font-size: smaller;
 }
